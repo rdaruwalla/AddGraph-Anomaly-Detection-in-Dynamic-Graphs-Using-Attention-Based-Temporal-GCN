@@ -1,0 +1,60 @@
+{
+  "model_name": "temporal_no_attention",
+  "overall_auc": 0.976686700271423,
+  "overall_pr_auc": 0.8590325578033334,
+  "threshold_used": 0.5,
+  "threshold_precision": 0.0005859947260474656,
+  "threshold_recall": 1.0,
+  "threshold_f1": 0.001171303074670571,
+  "total_edges_scored": 20644,
+  "total_attack_edges_scored": 12,
+  "num_nodes": 8285,
+  "num_snapshots": 98,
+  "train_until": 68,
+  "rows_after_cleaning": 682578,
+  "loader_info": {
+    "num_csv_files": 3,
+    "selected_attack_types": null,
+    "original_label_counts": {
+      "DDOS": 128027,
+      "BENIGN": 393441,
+      "PORTSCAN": 158930,
+      "WEB ATTACK \u2013 BRUTE FORCE": 1507,
+      "WEB ATTACK \u2013 XSS": 652,
+      "WEB ATTACK \u2013 SQL INJECTION": 21
+    },
+    "per_file_summary": [
+      {
+        "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+        "rows_after_cleaning": 225745,
+        "benign_rows": 97718,
+        "attack_rows": 128027
+      },
+      {
+        "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+        "rows_after_cleaning": 286467,
+        "benign_rows": 127537,
+        "attack_rows": 158930
+      },
+      {
+        "file": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+        "rows_after_cleaning": 170366,
+        "benign_rows": 168186,
+        "attack_rows": 2180
+      }
+    ],
+    "total_cleaned_flows": 682578,
+    "unique_ip_nodes": 8285,
+    "num_snapshots": 98,
+    "total_aggregated_edges": 67228,
+    "attack_labeled_edges": 34
+  },
+  "score_trend_summary": {
+    "num_eval_snapshots": 30,
+    "avg_snapshot_mean_score": 19.555629810194706,
+    "avg_snapshot_attack_score": 24999.850735675205,
+    "avg_snapshot_benign_score": 5.628572496707025,
+    "max_snapshot_mean_score": 128.02814405486382,
+    "min_snapshot_mean_score": 3.0088540255705234
+  }
+}

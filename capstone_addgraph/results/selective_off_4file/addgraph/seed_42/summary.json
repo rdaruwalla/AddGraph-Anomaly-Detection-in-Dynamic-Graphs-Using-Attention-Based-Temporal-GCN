@@ -1,0 +1,51 @@
+{
+  "model_name": "addgraph",
+  "overall_auc": 0.9999595616482673,
+  "overall_pr_auc": 0.9484126984126984,
+  "threshold_used": 0.5,
+  "threshold_precision": 0.0007759958613554061,
+  "threshold_recall": 1.0,
+  "threshold_f1": 0.0015507883173946756,
+  "total_edges_scored": 8249,
+  "total_attack_edges_scored": 6,
+  "num_nodes": 5541,
+  "num_snapshots": 49,
+  "train_until": 34,
+  "rows_after_cleaning": 512212,
+  "loader_info": {
+    "num_csv_files": 2,
+    "selected_attack_types": null,
+    "original_label_counts": {
+      "DDOS": 128027,
+      "BENIGN": 225255,
+      "PORTSCAN": 158930
+    },
+    "per_file_summary": [
+      {
+        "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+        "rows_after_cleaning": 225745,
+        "benign_rows": 97718,
+        "attack_rows": 128027
+      },
+      {
+        "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+        "rows_after_cleaning": 286467,
+        "benign_rows": 127537,
+        "attack_rows": 158930
+      }
+    ],
+    "total_cleaned_flows": 512212,
+    "unique_ip_nodes": 5541,
+    "num_snapshots": 49,
+    "total_aggregated_edges": 34209,
+    "attack_labeled_edges": 18
+  },
+  "score_trend_summary": {
+    "num_eval_snapshots": 15,
+    "avg_snapshot_mean_score": 20.242830212336354,
+    "avg_snapshot_attack_score": 22032.7849609375,
+    "avg_snapshot_benign_score": 5.749166477578438,
+    "max_snapshot_mean_score": 86.1753665824817,
+    "min_snapshot_mean_score": 2.364715704661247
+  }
+}

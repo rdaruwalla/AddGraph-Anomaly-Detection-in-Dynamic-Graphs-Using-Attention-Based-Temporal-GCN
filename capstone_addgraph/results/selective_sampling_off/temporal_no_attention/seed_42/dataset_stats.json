@@ -1,0 +1,480 @@
+{
+  "num_snapshots": 49,
+  "train_snapshots": 34,
+  "test_snapshots": 15,
+  "train_benign_edges": 25948,
+  "train_attack_edges": 12,
+  "test_benign_edges": 8243,
+  "test_attack_edges": 6,
+  "per_snapshot": [
+    {
+      "snapshot_index": 0,
+      "edges": 257,
+      "benign_edges": 257,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:00:00",
+      "end_time": "2017-07-07 01:04:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 1,
+      "edges": 414,
+      "benign_edges": 413,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 01:05:00",
+      "end_time": "2017-07-07 01:09:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 2,
+      "edges": 477,
+      "benign_edges": 477,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:10:00",
+      "end_time": "2017-07-07 01:14:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 3,
+      "edges": 541,
+      "benign_edges": 541,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:15:00",
+      "end_time": "2017-07-07 01:19:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 4,
+      "edges": 472,
+      "benign_edges": 472,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:20:00",
+      "end_time": "2017-07-07 01:24:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 5,
+      "edges": 545,
+      "benign_edges": 545,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:25:00",
+      "end_time": "2017-07-07 01:29:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 6,
+      "edges": 906,
+      "benign_edges": 906,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:30:00",
+      "end_time": "2017-07-07 01:34:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 7,
+      "edges": 1535,
+      "benign_edges": 1535,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:35:00",
+      "end_time": "2017-07-07 01:39:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 8,
+      "edges": 571,
+      "benign_edges": 571,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:40:00",
+      "end_time": "2017-07-07 01:44:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 9,
+      "edges": 751,
+      "benign_edges": 751,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 01:45:00",
+      "end_time": "2017-07-07 01:49:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 10,
+      "edges": 549,
+      "benign_edges": 548,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 01:50:00",
+      "end_time": "2017-07-07 01:54:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 11,
+      "edges": 804,
+      "benign_edges": 803,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 01:55:00",
+      "end_time": "2017-07-07 01:59:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 12,
+      "edges": 514,
+      "benign_edges": 513,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 02:00:00",
+      "end_time": "2017-07-07 02:04:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 13,
+      "edges": 891,
+      "benign_edges": 891,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 02:05:00",
+      "end_time": "2017-07-07 02:09:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 14,
+      "edges": 1046,
+      "benign_edges": 1045,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 02:10:00",
+      "end_time": "2017-07-07 02:14:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 15,
+      "edges": 770,
+      "benign_edges": 769,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 02:15:00",
+      "end_time": "2017-07-07 02:19:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 16,
+      "edges": 814,
+      "benign_edges": 814,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 02:20:00",
+      "end_time": "2017-07-07 02:24:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 17,
+      "edges": 1079,
+      "benign_edges": 1079,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 02:25:00",
+      "end_time": "2017-07-07 02:29:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 18,
+      "edges": 629,
+      "benign_edges": 629,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 02:30:00",
+      "end_time": "2017-07-07 02:34:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 19,
+      "edges": 910,
+      "benign_edges": 910,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 02:35:00",
+      "end_time": "2017-07-07 02:39:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 20,
+      "edges": 643,
+      "benign_edges": 643,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 02:40:00",
+      "end_time": "2017-07-07 02:44:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 21,
+      "edges": 704,
+      "benign_edges": 704,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 02:45:00",
+      "end_time": "2017-07-07 02:49:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 22,
+      "edges": 756,
+      "benign_edges": 755,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 02:50:00",
+      "end_time": "2017-07-07 02:54:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 23,
+      "edges": 1038,
+      "benign_edges": 1037,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 02:55:00",
+      "end_time": "2017-07-07 02:59:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 24,
+      "edges": 703,
+      "benign_edges": 702,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 03:00:00",
+      "end_time": "2017-07-07 03:04:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 25,
+      "edges": 920,
+      "benign_edges": 919,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 03:05:00",
+      "end_time": "2017-07-07 03:09:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 26,
+      "edges": 1214,
+      "benign_edges": 1213,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 03:10:00",
+      "end_time": "2017-07-07 03:14:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 27,
+      "edges": 802,
+      "benign_edges": 802,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 03:15:00",
+      "end_time": "2017-07-07 03:19:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 28,
+      "edges": 944,
+      "benign_edges": 943,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 03:20:00",
+      "end_time": "2017-07-07 03:24:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 29,
+      "edges": 1017,
+      "benign_edges": 1017,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 03:25:00",
+      "end_time": "2017-07-07 03:29:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 30,
+      "edges": 1073,
+      "benign_edges": 1073,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 03:30:00",
+      "end_time": "2017-07-07 03:34:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 31,
+      "edges": 726,
+      "benign_edges": 726,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 03:35:00",
+      "end_time": "2017-07-07 03:39:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 32,
+      "edges": 606,
+      "benign_edges": 606,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 03:40:00",
+      "end_time": "2017-07-07 03:44:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 33,
+      "edges": 339,
+      "benign_edges": 339,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 03:45:00",
+      "end_time": "2017-07-07 03:49:00",
+      "split": "train"
+    },
+    {
+      "snapshot_index": 34,
+      "edges": 382,
+      "benign_edges": 382,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 03:50:00",
+      "end_time": "2017-07-07 03:54:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 35,
+      "edges": 664,
+      "benign_edges": 663,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 03:55:00",
+      "end_time": "2017-07-07 03:59:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 36,
+      "edges": 555,
+      "benign_edges": 554,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 04:00:00",
+      "end_time": "2017-07-07 04:04:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 37,
+      "edges": 463,
+      "benign_edges": 461,
+      "attack_edges": 2,
+      "start_time": "2017-07-07 04:05:00",
+      "end_time": "2017-07-07 04:09:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 38,
+      "edges": 871,
+      "benign_edges": 870,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 04:10:00",
+      "end_time": "2017-07-07 04:14:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 39,
+      "edges": 644,
+      "benign_edges": 643,
+      "attack_edges": 1,
+      "start_time": "2017-07-07 04:15:00",
+      "end_time": "2017-07-07 04:19:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 40,
+      "edges": 682,
+      "benign_edges": 682,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:20:00",
+      "end_time": "2017-07-07 04:24:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 41,
+      "edges": 598,
+      "benign_edges": 598,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:25:00",
+      "end_time": "2017-07-07 04:29:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 42,
+      "edges": 562,
+      "benign_edges": 562,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:30:00",
+      "end_time": "2017-07-07 04:34:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 43,
+      "edges": 303,
+      "benign_edges": 303,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:35:00",
+      "end_time": "2017-07-07 04:39:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 44,
+      "edges": 578,
+      "benign_edges": 578,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:40:00",
+      "end_time": "2017-07-07 04:44:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 45,
+      "edges": 386,
+      "benign_edges": 386,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:45:00",
+      "end_time": "2017-07-07 04:49:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 46,
+      "edges": 537,
+      "benign_edges": 537,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:50:00",
+      "end_time": "2017-07-07 04:54:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 47,
+      "edges": 669,
+      "benign_edges": 669,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 04:55:00",
+      "end_time": "2017-07-07 04:59:00",
+      "split": "test"
+    },
+    {
+      "snapshot_index": 48,
+      "edges": 355,
+      "benign_edges": 355,
+      "attack_edges": 0,
+      "start_time": "2017-07-07 05:00:00",
+      "end_time": "2017-07-07 05:02:00",
+      "split": "test"
+    }
+  ],
+  "loader_info": {
+    "num_csv_files": 2,
+    "selected_attack_types": null,
+    "original_label_counts": {
+      "DDOS": 128027,
+      "BENIGN": 225255,
+      "PORTSCAN": 158930
+    },
+    "per_file_summary": [
+      {
+        "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+        "rows_after_cleaning": 225745,
+        "benign_rows": 97718,
+        "attack_rows": 128027
+      },
+      {
+        "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+        "rows_after_cleaning": 286467,
+        "benign_rows": 127537,
+        "attack_rows": 158930
+      }
+    ],
+    "total_cleaned_flows": 512212,
+    "unique_ip_nodes": 5541,
+    "num_snapshots": 49,
+    "total_aggregated_edges": 34209,
+    "attack_labeled_edges": 18
+  }
+}

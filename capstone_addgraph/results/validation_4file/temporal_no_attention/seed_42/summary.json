@@ -1,0 +1,67 @@
+{
+  "model_name": "temporal_no_attention",
+  "overall_auc": 0.960360220142575,
+  "overall_pr_auc": 0.621789045277013,
+  "threshold_used": 0.5,
+  "threshold_precision": 0.0007509165599187244,
+  "threshold_recall": 1.0,
+  "threshold_f1": 0.0015007062146892656,
+  "total_edges_scored": 32520,
+  "total_attack_edges_scored": 17,
+  "num_nodes": 10786,
+  "num_snapshots": 147,
+  "train_until": 102,
+  "rows_after_cleaning": 971180,
+  "loader_info": {
+    "num_csv_files": 4,
+    "selected_attack_types": null,
+    "original_label_counts": {
+      "DDOS": 128027,
+      "BENIGN": 682007,
+      "PORTSCAN": 158930,
+      "INFILTRATION": 36,
+      "WEB ATTACK \u2013 BRUTE FORCE": 1507,
+      "WEB ATTACK \u2013 XSS": 652,
+      "WEB ATTACK \u2013 SQL INJECTION": 21
+    },
+    "per_file_summary": [
+      {
+        "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+        "rows_after_cleaning": 225745,
+        "benign_rows": 97718,
+        "attack_rows": 128027
+      },
+      {
+        "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+        "rows_after_cleaning": 286467,
+        "benign_rows": 127537,
+        "attack_rows": 158930
+      },
+      {
+        "file": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+        "rows_after_cleaning": 288602,
+        "benign_rows": 288566,
+        "attack_rows": 36
+      },
+      {
+        "file": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+        "rows_after_cleaning": 170366,
+        "benign_rows": 168186,
+        "attack_rows": 2180
+      }
+    ],
+    "total_cleaned_flows": 971180,
+    "unique_ip_nodes": 10786,
+    "num_snapshots": 147,
+    "total_aggregated_edges": 107386,
+    "attack_labeled_edges": 49
+  },
+  "score_trend_summary": {
+    "num_eval_snapshots": 45,
+    "avg_snapshot_mean_score": 12.089579946317778,
+    "avg_snapshot_attack_score": 15581.428278692067,
+    "avg_snapshot_benign_score": 3.679461937871294,
+    "max_snapshot_mean_score": 115.27544884880383,
+    "min_snapshot_mean_score": 2.250632287271447
+  }
+}

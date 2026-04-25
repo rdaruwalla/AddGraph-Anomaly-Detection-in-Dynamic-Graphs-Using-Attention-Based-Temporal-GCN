@@ -1,0 +1,4 @@
+epoch,mean_loss,steps,skipped_no_benign,skipped_no_pairs
+1,0.5282614033888368,68,0,0
+2,0.27751200010671334,68,0,0
+3,0.19245278791469686,68,0,0
