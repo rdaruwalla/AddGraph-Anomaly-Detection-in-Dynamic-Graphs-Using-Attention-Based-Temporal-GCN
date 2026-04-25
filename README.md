@@ -1,58 +1,65 @@
-# capstone_addgraph
+# Reproducing AddGraph: Anomaly Detection in Dynamic Graphs Using Attention-Based Temporal GCN
 
-Reproduction study of [AddGraph (IJCAI 2019)](https://arxiv.org/abs/1908.05653) applied to the CICIDS2017 network intrusion dataset. The project implements three model variants — full AddGraph, a temporal GCN without attention, and a static GCN baseline — and compares them across several experimental settings as part of a CS5100 capstone at Northeastern University.
+CS5100 Foundations of Artificial Intelligence — Northeastern University, Spring 2026
+
+**Demo video:** https://drive.google.com/file/d/1rbrZPsGgA9119nHxdaiAO4ssw6fnNgzs/view?usp=sharing  
+**Dataset:** [CICIDS2017](https://www.unb.ca/cic/datasets/ids-2017.html) (download separately, not included)
 
 ---
 
-## Project Structure
+## Overview
+
+This project reproduces [AddGraph (Zheng et al., IJCAI 2019)](https://arxiv.org/abs/1908.05653), a semi-supervised framework for anomalous edge detection in dynamic graphs. Instead of replicating the original experiments on UCI Message and Digg, the method is applied to the CICIDS2017 network intrusion dataset to test whether the core architectural claims hold on real labeled attack traffic.
+
+Three model variants are implemented and compared:
+
+- **AddGraph** — full model with GCN, Contextual Attention Block, and GRU
+- **Temporal No-Attention** — same as AddGraph but with mean pooling instead of attention
+- **Static GCN** — no temporal modeling, structural baseline only
+
+---
+
+## Repo Structure
 
 ```
 capstone_addgraph/
 ├── data/
-│   ├── loaders.py          # loads and preprocesses CICIDS2017 into graph snapshots
+│   ├── loaders.py          # loads CICIDS2017 CSVs and builds graph snapshots
 │   ├── types.py            # Edge and SnapshotBatch type definitions
-│   └── dataset_stats.py    # snapshot-level statistics and train/test summaries
+│   └── dataset_stats.py    # snapshot-level train/test statistics
 ├── models/
 │   ├── config.py           # AddGraphConfig dataclass
-│   ├── addgraph.py         # full AddGraph model (GCN + CAB + GRU)
+│   ├── addgraph.py         # full AddGraph model
 │   ├── gcn.py              # multi-layer GCN
-│   ├── attention.py        # contextual attention block and mean pooling block
-│   ├── scorer.py           # anomaly scorer
-│   ├── static_gcn_baseline.py      # static GCN baseline (no temporal modeling)
-│   └── temporal_no_attention.py    # temporal GCN with mean pooling instead of attention
+│   ├── attention.py        # contextual attention block and mean pooling
+│   ├── scorer.py           # edge anomaly scorer
+│   ├── static_gcn_baseline.py      # static GCN baseline
+│   └── temporal_no_attention.py    # temporal GCN without attention
 ├── training/
 │   ├── trainer.py          # snapshot-by-snapshot training loop
-│   ├── evaluation.py       # evaluation loop and metrics
+│   ├── evaluation.py       # evaluation loop, ROC-AUC, PR-AUC
 │   ├── losses.py           # pairwise margin loss
-│   └── negative_sampling.py        # Bernoulli negative sampler and selective filter
+│   └── negative_sampling.py        # Bernoulli sampler and selective filter
 ├── experiments/
-│   └── run_experiment.py   # main entry point for running a single experiment
+│   └── run_experiment.py   # main entry point
 └── utils/
     ├── graph.py            # adjacency matrix normalization
     ├── seed.py             # global seed setter
-    └── io_utils.py         # directory creation, JSON and CSV saving
+    └── io_utils.py         # JSON and CSV saving
+results/                    # all experiment outputs (JSON + CSV)
 ```
 
 ---
 
 ## Setup
 
-You need Python 3.10+ and the following packages:
-
-```
-torch
-numpy
-pandas
-scikit-learn
-```
-
-Install them however you prefer, e.g.:
+Python 3.10+ required. Install dependencies:
 
 ```bash
 pip install torch numpy pandas scikit-learn
 ```
 
-You also need the CICIDS2017 dataset CSV files. Place them all in a single directory, e.g. `CICIDS2017/`. The loader will pick up any `.csv` files in that directory, and you can filter which files to use via `--allowed_files`.
+Download the CICIDS2017 CSV files from the [UNB dataset page](https://www.unb.ca/cic/datasets/ids-2017.html) and place them in a folder called `CICIDS2017/` in the project root.
 
 ---
 
@@ -77,28 +84,39 @@ python capstone_addgraph/experiments/run_experiment.py \
   --output_dir ./results/setting_a/
 ```
 
-`--model_name` can be `addgraph`, `static_gcn`, or `temporal_no_attention`.
+`--model_name` accepts `addgraph`, `static_gcn`, or `temporal_no_attention`.
 
-Results are saved to `--output_dir/<model_name>/seed_<seed>/` and include:
-- `config.json` — the full argument config used for the run
-- `dataset_stats.json` — snapshot-level breakdown of edges and labels
-- `summary.json` — overall ROC-AUC, PR-AUC, and score trend summary
-- `training_history.csv` — per-epoch loss
-- `per_snapshot_metrics.csv` — per-snapshot AUC and score statistics
+To enable selective negative sampling, omit the two `--disable` flags.
 
 ---
 
-## Results
+## Output Files
 
-Results from all experimental settings are stored in `results/`. The main settings are:
+Each run saves to `--output_dir/<model_name>/seed_<seed>/`:
 
-- `setting_a/` — window size 2, 3 files, seeds 42 and 43
-- `setting_b/` — window size 1, 3 files, seeds 42 and 43
-- `validation_4file/` — window size 2, 4 files, seed 42
-- `selective_sampling_on/` — AddGraph with selective negative sampling enabled, 2 files, seed 42
+| File | Contents |
+|------|----------|
+| `config.json` | Full run configuration |
+| `dataset_stats.json` | Per-snapshot edge and label breakdown |
+| `summary.json` | Overall ROC-AUC, PR-AUC, score trend summary |
+| `training_history.csv` | Per-epoch loss |
+| `per_snapshot_metrics.csv` | Per-snapshot AUC and score statistics |
+
+Pre-computed results for all experimental settings are included in `results/`.
 
 ---
 
-## Key Findings
+## Experimental Settings
 
-Temporal modeling consistently improves ROC-AUC over the static GCN baseline across all settings and seeds. The attention mechanism does not show a clear consistent advantage over mean pooling on this dataset. PR-AUC is heavily influenced by edge weight for high-volume attacks like DDoS and PortScan. See the report for full analysis.
+| Setting | Files | Seeds | Window |
+|---------|-------|-------|--------|
+| Setting A (primary ablation) | DDoS, PortScan, WebAttacks | 42, 43 | 2 |
+| Setting B (attention check) | DDoS, PortScan, WebAttacks | 42, 43 | 1 |
+| 4-file Validation | + Infiltration | 42 | 2 |
+| Selective Sampling On/Off | DDoS, PortScan | 42 | 2 |
+
+---
+
+## Key Results
+
+Temporal modeling consistently improves ROC-AUC over the static GCN baseline across all settings and seeds. The attention mechanism does not show a clear consistent advantage over mean pooling on this dataset. PR-AUC is dominated by edge weight on high-volume attacks like DDoS and PortScan, making it an unreliable architectural discriminator in this setting. See the report for full analysis.
