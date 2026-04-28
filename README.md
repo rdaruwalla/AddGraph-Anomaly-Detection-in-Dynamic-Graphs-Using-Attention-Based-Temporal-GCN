@@ -9,7 +9,7 @@ CS5100 Foundations of Artificial Intelligence — Northeastern University, Sprin
 
 ## Overview
 
-This project reproduces [AddGraph (Zheng et al., IJCAI 2019)](https://arxiv.org/abs/1908.05653), a semi-supervised framework for anomalous edge detection in dynamic graphs. Instead of replicating the original experiments on UCI Message and Digg, the method is applied to the CICIDS2017 network intrusion dataset to test whether the core architectural claims hold on real labeled attack traffic.
+This project reproduces [AddGraph (Zheng et al., IJCAI 2019)](https://www.ijcai.org/proceedings/2019/614), a semi-supervised framework for anomalous edge detection in dynamic graphs. Instead of replicating the original experiments on UCI Message and Digg, the method is applied to the CICIDS2017 network intrusion dataset to test whether the core architectural claims hold on real labeled attack traffic.
 
 Three model variants are implemented and compared:
 
